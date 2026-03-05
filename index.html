@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My E-Commerce Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h2>MyShop</h2>
+
+<input type="text" id="search" placeholder="Search product..." onkeyup="searchProduct()">
+
+<div class="cartIcon">
+🛒 <span id="cartCount">0</span>
+</div>
+
+<button onclick="showCart()">Cart</button>
+<button onclick="logout()">Logout</button>
+
+</header>
+
+
+<!-- REGISTER -->
+<div id="registerBox" class="auth">
+
+<h2>Create Account</h2>
+
+<input type="text" id="regUser" placeholder="Username">
+<input type="password" id="regPass" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p>Already have account?</p>
+<button onclick="showLogin()">Login</button>
+
+</div>
+
+
+<!-- LOGIN -->
+<div id="loginBox" class="auth" style="display:none">
+
+<h2>Login</h2>
+
+<input type="text" id="loginUser" placeholder="Username">
+<input type="password" id="loginPass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p>No account?</p>
+<button onclick="showRegister()">Register</button>
+
+</div>
+
+
+<!-- SHOP -->
+<div id="shop" style="display:none">
+
+<div class="products" id="productList">
+
+</div>
+
+</div>
+
+
+<!-- CART PAGE -->
+<div id="cartPage" style="display:none">
+
+<h2>Your Cart</h2>
+
+<ul id="cartItems"></ul>
+
+<button onclick="backToShop()">Back to Shop</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
